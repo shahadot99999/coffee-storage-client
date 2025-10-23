@@ -8,7 +8,7 @@ const CoffeeDetails = () => {
     const [coffee, setCoffee] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:3000/coffees/${id}`)
+        fetch(`https://coffee-storage-server.vercel.app/coffees/${id}`)
             .then(res => res.json())
             .then(data => setCoffee(data));
     }, [id]);
